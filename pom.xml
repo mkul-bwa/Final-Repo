@@ -26,7 +26,12 @@
     <version>3.24.0-01</version>
     <scope>provided</scope>
 </dependency>
-
+    <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-deploy-plugin -->
+<dependency>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-deploy-plugin</artifactId>
+    <version>3.0.0-M1</version>
+</dependency>
   </dependencies>
   <build>
     <plugins>
@@ -74,14 +79,8 @@
     </plugins>
   </build>
    <distributionManagement>
-        <repository>
-            <id>deployment</id>
-            <name>Internal Releases</name>
-            <url>http://localhost:8081/repository/simpleapp-release/</url>
-        </repository>
         <snapshotRepository>
-            <id>deployment</id>
-            <name>Internal Snapshot Releases</name>
+            <id>nexus-snapshots</id>
             <url>http://localhost:8081/repository/simpleapp/</url>
         </snapshotRepository>
     </distributionManagement>
